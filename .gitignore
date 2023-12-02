@@ -396,3 +396,5 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+YetGenAkbankJump10/YetGenAkbankJump.WebApi/appsettings.Development.json
+YetGenAkbankJump10/YetGenAkbankJump.WebApi/appsettings.json

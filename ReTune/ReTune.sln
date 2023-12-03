@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{30AF69AE-D983-4AD1-A2D8-440FE78CEC13}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{BF427BE4-234A-4401-99E3-31758BD03732}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{E5852CE6-4D84-4013-A539-A8C5F910FFCF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReDoMusic.Domain", "Core\ReDoMusic.Domain\ReDoMusic.Domain.csproj", "{4B622A15-A3C6-4BBF-AC69-C90CCBF17C5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReDoMusic.Persistence", "Infrastructure\ReDoMusic.Persistence\ReDoMusic.Persistence.csproj", "{E5010D37-B58F-4AF2-B4A0-26EF389CCDFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReDoMusic.MVC", "Presentation\ReDoMusic.MVC\ReDoMusic.MVC.csproj", "{687FD06B-D3BC-43D9-96A9-28CB98503ACE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4B622A15-A3C6-4BBF-AC69-C90CCBF17C5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B622A15-A3C6-4BBF-AC69-C90CCBF17C5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B622A15-A3C6-4BBF-AC69-C90CCBF17C5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B622A15-A3C6-4BBF-AC69-C90CCBF17C5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5010D37-B58F-4AF2-B4A0-26EF389CCDFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5010D37-B58F-4AF2-B4A0-26EF389CCDFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5010D37-B58F-4AF2-B4A0-26EF389CCDFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5010D37-B58F-4AF2-B4A0-26EF389CCDFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{687FD06B-D3BC-43D9-96A9-28CB98503ACE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{687FD06B-D3BC-43D9-96A9-28CB98503ACE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{687FD06B-D3BC-43D9-96A9-28CB98503ACE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{687FD06B-D3BC-43D9-96A9-28CB98503ACE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4B622A15-A3C6-4BBF-AC69-C90CCBF17C5E} = {30AF69AE-D983-4AD1-A2D8-440FE78CEC13}
+		{E5010D37-B58F-4AF2-B4A0-26EF389CCDFB} = {BF427BE4-234A-4401-99E3-31758BD03732}
+		{687FD06B-D3BC-43D9-96A9-28CB98503ACE} = {E5852CE6-4D84-4013-A539-A8C5F910FFCF}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {970F6F1C-1C91-45DA-A060-923FE4E8830E}
+	EndGlobalSection
+EndGlobal

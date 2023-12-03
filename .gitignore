@@ -398,3 +398,5 @@ FodyWeavers.xsd
 *.sln.iml
 YetGenAkbankJump10/YetGenAkbankJump.WebApi/appsettings.Development.json
 YetGenAkbankJump10/YetGenAkbankJump.WebApi/appsettings.json
+YetGenAkbankJumpWeek11/Week11_1/Presentation/Week11_1.API/appsettings.json
+YetGenAkbankJumpWeek11/Week11_1/Presentation/Week11_1.API/appsettings.Development.json

@@ -10,8 +10,7 @@ namespace Week11_2.Domain.Dtos
 	{
         public Guid Id { get; set; }
         public string Name { get; set; }
-        public Guid CategoryId { get; set; }
-        public string CategoryName { get; set; }
-        public DateTimeOffset CreatedOn { get; set; }
+		public List<ProductGetAllCategoryDto> Categories { get; set; }
+		public DateTimeOffset CreatedOn { get; set; }
     }
 }

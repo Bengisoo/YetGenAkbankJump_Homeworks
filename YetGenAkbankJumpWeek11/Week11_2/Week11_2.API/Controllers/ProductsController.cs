@@ -34,20 +34,21 @@ namespace Week11_2.API.Controllers
 		public async Task<IActionResult> GetAllAsync(CancellationToken cancellationToken)
 		{
 			var products = await _applicationDbContext
-				.Products
-				.Include(x => x.Category)
-				.AsNoTracking()
-				.Select(x => new ProductDto()
-				{
-					Id = x.Id,
-					CreatedOn = x.CreatedOn,
-					Name = x.Name,
-					//Categories = x.ProductCategories.Select(x => new ProductGetAllCategoryDto()
-					//{
-					//	Id = x.Category.Id,
-					//	Name = x.Category.Name,
-					//}).ToList()
-				}).ToListAsync(cancellationToken);
+			   .Products
+			   .Include(x => x.ProductCategories)
+			   .ThenInclude(x => x.Category)
+			   .AsNoTracking()
+			   .Select(x => new ProductDto()
+			   {
+				   Id = x.Id,
+				   CreatedOn = x.CreatedOn,
+				   Name = x.Name,
+				   Categories = x.ProductCategories.Select(x => new ProductGetAllCategoryDto()
+				   {
+					   Id = x.Category.Id,
+					   Name = x.Category.Name,
+				   }).ToList()
+			   }).ToListAsync(cancellationToken);
 
 			return Ok(products);
 		}
@@ -55,17 +56,36 @@ namespace Week11_2.API.Controllers
 		[HttpPost]
 		public async Task<IActionResult> AddAsync(ProductAddDto productAddDto, CancellationToken cancellationToken)
 		{
-			if (productAddDto is null || string.IsNullOrEmpty(productAddDto.Name) ||
-				productAddDto.CategoryId == Guid.Empty)
+			if (productAddDto is null || string.IsNullOrEmpty(productAddDto.Name))
 				return BadRequest();
 
+			List<ProductCategory> productCategories = new List<ProductCategory>();
+
+			var id = Guid.NewGuid();
+
+			if (productAddDto.CategoryIds is not null && productAddDto.CategoryIds.Any())
+			{
+				foreach (var categoryId in productAddDto.CategoryIds)
+				{
+					var productCategory = new ProductCategory()
+					{
+						CategoryId = categoryId,
+						ProductId = id,
+						CreatedOn = DateTimeOffset.UtcNow,
+						CreatedByUserId = "zbd"
+					};
+
+					productCategories.Add(productCategory);
+				}
+			}
 			var product = new Product()
 			{
-				Id = Guid.NewGuid(),
+				Id = id,
 				Name = productAddDto.Name,
-				CreatedOn = DateTime.UtcNow,
 				CreatedByUserId = "zbd",
+				CreatedOn = DateTimeOffset.UtcNow,
 				IsDeleted = false,
+				ProductCategories = productCategories
 
 			};
 

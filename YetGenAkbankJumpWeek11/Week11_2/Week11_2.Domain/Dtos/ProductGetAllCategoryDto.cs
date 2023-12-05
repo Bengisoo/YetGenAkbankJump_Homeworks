@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Week11_2.Domain.Dtos
 {
-	internal class ProductGetAllCategoryDto
+	public class ProductGetAllCategoryDto
 	{
+		public Guid Id { get; set; }
+		public string Name { get; set; }
 	}
 }

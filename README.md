@@ -6,5 +6,6 @@
 - YetGenAkbankJumpWeek11 Folder:
     - Week11_1: Fluent Validation homework
     - Week11_2: Indentity homework
+- YetGenAkbankJumpWeek13 Folder: Repository pattern, CQRS pattern & MediatR (13th week's live lecture's codes)
    
  
